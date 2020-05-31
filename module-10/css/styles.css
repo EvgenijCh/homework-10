@@ -1,8 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -53,6 +61,15 @@ li {
 }
 
 .header {
+  background-image: -webkit-gradient(linear,
+      left bottom, left top,
+      color-stop(0, rgba(252, 227, 138, 0.9)),
+      to(rgba(243, 129, 129, 0.9))),
+    url(../img/eagle.jpg);
+  background-image: -o-linear-gradient(bottom,
+      rgba(252, 227, 138, 0.9) 0,
+      rgba(243, 129, 129, 0.9)),
+    url(../img/eagle.jpg);
   background-image: linear-gradient(0deg,
       rgba(252, 227, 138, 0.9) 0,
       rgba(243, 129, 129, 0.9)),
@@ -61,8 +78,19 @@ li {
   background-size: cover;
 }
 
-@media (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-resolution: 192dpi) {
   .header {
+    background-image: -webkit-gradient(linear,
+        left bottom, left top,
+        color-stop(0, rgba(252, 227, 138, 0.9)),
+        to(rgba(243, 129, 129, 0.9))),
+      url(../img/eagle@2x.jpg);
+    background-image: -o-linear-gradient(bottom,
+        rgba(252, 227, 138, 0.9) 0,
+        rgba(243, 129, 129, 0.9)),
+      url(../img/eagle@2x.jpg);
     background-image: linear-gradient(0deg,
         rgba(252, 227, 138, 0.9) 0,
         rgba(243, 129, 129, 0.9)),
@@ -78,13 +106,21 @@ li {
 }
 
 .menu-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 164px;
 }
 
 .navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -112,6 +148,8 @@ li {
 
 .navigation-list-item a:hover {
   color: #fce38a;
+  -webkit-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
   transition: 0.4s linear;
 }
 
@@ -121,6 +159,8 @@ li {
   width: 100%;
   height: 3px;
   bottom: -12px;
+  -webkit-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
   transition: 0.4s linear;
 }
 
@@ -141,8 +181,12 @@ li {
 
 .navigation__icon:hover {
   fill: #fce38a;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
   transform: scale(2);
   cursor: pointer;
+  -webkit-transition: 0.6s linear;
+  -o-transition: 0.6s linear;
   transition: 0.6s linear;
 }
 
@@ -187,6 +231,8 @@ li {
 
 .head-content-btn:hover {
   background-color: #ffffff;
+  -webkit-transition: 0.9s;
+  -o-transition: 0.9s;
   transition: 0.9s;
   color: #edd58a;
 }
@@ -222,6 +268,8 @@ li {
   position: absolute;
   left: 50%;
   bottom: -40px;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
 
@@ -259,14 +307,22 @@ li {
 }
 
 .icon-service:hover {
+  -webkit-transform: rotateX(360deg);
   transform: rotateX(360deg);
   cursor: pointer;
+  -webkit-transition: 1s linear;
+  -o-transition: 1s linear;
   transition: 1s linear;
 }
 
 .service-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -315,27 +371,46 @@ li {
   width: 380px;
   position: relative;
   margin-bottom: 30px;
+  -webkit-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
   transition: 0.4s linear;
 }
 
 .team-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .overlay {
+  background-image: -webkit-gradient(linear,
+      left bottom, left top,
+      from(rgba(252, 227, 138, 0.902)),
+      to(hsla(0, 83%, 73%, 0.902)));
+  background-image: -o-linear-gradient(bottom,
+      rgba(252, 227, 138, 0.902) 0%,
+      hsla(0, 83%, 73%, 0.902) 100%);
   background-image: linear-gradient(to top,
       rgba(252, 227, 138, 0.902) 0%,
       hsla(0, 83%, 73%, 0.902) 100%);
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
   transition: 0.4s linear;
 }
 
@@ -345,22 +420,31 @@ li {
 }
 
 .team-list-item:hover .team-list-card {
+  -webkit-transform: translate(-10px, -10px);
+  -ms-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
+  -webkit-box-shadow: 10px 10px 0 0 #95e1d3;
   box-shadow: 10px 10px 0 0 #95e1d3;
 }
 
 .social-list {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   top: 44%;
 }
 
 .social-list__item-link {
   display: block;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 56px;
   height: 56px;
   background-color: #fce38a;
+  -webkit-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
   margin-right: 1px;
   position: relative;
@@ -368,11 +452,15 @@ li {
 
 .social-list__item-link:hover {
   background-color: #f38181;
+  -webkit-transform: 0.3s;
+  -ms-transform: 0.3s;
   transform: 0.3s;
 }
 
 .social-list__item-link:hover .social-icon {
   fill: #ffffff;
+  -webkit-transform: 0.3s;
+  -ms-transform: 0.3s;
   transform: 0.3s;
 }
 
@@ -395,8 +483,14 @@ li {
 }
 
 .wrapper-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-top: 1px solid #e5e5e5;
 }
@@ -416,6 +510,8 @@ li {
 }
 
 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -427,6 +523,38 @@ input {
   border: 1px solid #e7e7e7;
   outline: none;
   color: #9c9999;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+input::-webkit-input-placeholder {
+  color: #cccccc;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+input::-moz-placeholder {
+  color: #cccccc;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+input:-ms-input-placeholder {
+  color: #cccccc;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+input::-ms-input-placeholder {
+  color: #cccccc;
   font-family: "Roboto";
   font-size: 15px;
   font-weight: 400;
