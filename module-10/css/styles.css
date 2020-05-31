@@ -452,16 +452,10 @@ li {
 
 .social-list__item-link:hover {
   background-color: #f38181;
-  -webkit-transform: 0.3s;
-  -ms-transform: 0.3s;
-  transform: 0.3s;
 }
 
 .social-list__item-link:hover .social-icon {
   fill: #ffffff;
-  -webkit-transform: 0.3s;
-  -ms-transform: 0.3s;
-  transform: 0.3s;
 }
 
 .social-list__item-link:not(:last-child) {
