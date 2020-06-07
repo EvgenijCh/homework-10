@@ -47,6 +47,14 @@ img {
 li {
   list-style-type: none;
 }
+:root {
+  --ffmn: "Montserrat", sans-serif;
+  --ffrb: "Roboto";
+  --ffks: "Kaushan Script";
+  --col-w: rgb(255, 255, 255);
+  --col-g: rgb(51, 51, 51);
+  --col-lg: rgb(153, 153, 153);
+}
 
 .visually-hidden {
   position: absolute;
@@ -61,41 +69,53 @@ li {
 }
 
 .header {
-  background-image: -webkit-gradient(linear,
+  background-image: -webkit-gradient(
+      linear,
       left bottom,
       left top,
       color-stop(0, rgba(252, 227, 138, 0.9)),
-      to(rgba(243, 129, 129, 0.9))),
+      to(rgba(243, 129, 129, 0.9))
+    ),
     url(../img/eagle.jpg);
-  background-image: -o-linear-gradient(bottom,
+  background-image: -o-linear-gradient(
+      bottom,
       rgba(252, 227, 138, 0.9) 0,
-      rgba(243, 129, 129, 0.9)),
+      rgba(243, 129, 129, 0.9)
+    ),
     url(../img/eagle.jpg);
-  background-image: linear-gradient(0deg,
+  background-image: linear-gradient(
+      0deg,
       rgba(252, 227, 138, 0.9) 0,
-      rgba(243, 129, 129, 0.9)),
+      rgba(243, 129, 129, 0.9)
+    ),
     url(../img/eagle.jpg);
   background-position: center;
   background-size: cover;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
-(-o-min-device-pixel-ratio: 2/1),
-(min-resolution: 192dpi) {
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi) {
   .header {
-    background-image: -webkit-gradient(linear,
+    background-image: -webkit-gradient(
+        linear,
         left bottom,
         left top,
         color-stop(0, rgba(252, 227, 138, 0.9)),
-        to(rgba(243, 129, 129, 0.9))),
+        to(rgba(243, 129, 129, 0.9))
+      ),
       url(../img/eagle@2x.jpg);
-    background-image: -o-linear-gradient(bottom,
+    background-image: -o-linear-gradient(
+        bottom,
         rgba(252, 227, 138, 0.9) 0,
-        rgba(243, 129, 129, 0.9)),
+        rgba(243, 129, 129, 0.9)
+      ),
       url(../img/eagle@2x.jpg);
-    background-image: linear-gradient(0deg,
+    background-image: linear-gradient(
+        0deg,
         rgba(252, 227, 138, 0.9) 0,
-        rgba(243, 129, 129, 0.9)),
+        rgba(243, 129, 129, 0.9)
+      ),
       url(../img/eagle@2x.jpg);
   }
 }
@@ -133,8 +153,8 @@ li {
 .logotype,
 .nav-list__item,
 .header-btn {
-  font-family: "Montserrat", sans-serif;
-  color: #ffffff;
+  font-family: var(--ffmn);
+  color: var(--col-w);
 }
 
 .logotype {
@@ -149,7 +169,7 @@ li {
 }
 
 .nav-list__item a:hover {
-  color: #fce38a;
+  color: rgb(252, 227, 138);
   -webkit-transition: 0.4s linear;
   -o-transition: 0.4s linear;
   transition: 0.4s linear;
@@ -199,8 +219,8 @@ li {
 
 .header-subtitle {
   font-size: 72px;
-  font-family: "Kaushan Script";
-  color: rgb(255, 255, 255);
+  font-family: var(--ffks);
+  color: var(--col-w);
   line-height: 1.2;
   text-align: center;
   margin-bottom: 54px;
@@ -208,8 +228,8 @@ li {
 
 .header-title {
   font-size: 148px;
-  font-family: "Montserrat";
-  color: rgb(255, 255, 255);
+  font-family: var(--ffmn);
+  color: var(--col-w);
   font-weight: bold;
   text-transform: uppercase;
   line-height: 0.933;
@@ -229,7 +249,6 @@ li {
   line-height: 1.2;
   background-color: unset;
   cursor: pointer;
-
 }
 
 .header-btn:hover {
@@ -243,9 +262,9 @@ li {
 .section-title__text {
   display: block;
   font-size: 24px;
-  font-family: "Kaushan Script";
+  font-family: var(--ffks);
   font-weight: 400;
-  color: rgb(51, 51, 51);
+  color: var(--col-g);
   text-align: center;
   padding-top: 56px;
   margin-bottom: 24px;
@@ -253,8 +272,8 @@ li {
 
 .section-title {
   font-size: 30px;
-  font-family: "Montserrat";
-  color: rgb(51, 51, 51);
+  font-family: var(--ffmn);
+  color: var(--col-g);
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
@@ -278,8 +297,8 @@ li {
 
 .service-list__title {
   font-size: 14px;
-  font-family: "Montserrat";
-  color: rgb(51, 51, 51);
+  font-family: var(--ffmn);
+  color: var(--col-g);
   text-transform: uppercase;
   line-height: 1.2;
   text-align: left;
@@ -288,8 +307,8 @@ li {
 
 .service-list__discription {
   font-size: 15px;
-  font-family: "Roboto";
-  color: rgb(153, 153, 153);
+  font-family: var(--ffrb);
+  color: var(--col-lg);
   line-height: 1.6;
   text-align: left;
   margin-bottom: 42px;
@@ -346,16 +365,16 @@ li {
   margin: 0 auto;
   margin-bottom: 90px;
   font-size: 15px;
-  font-family: "Roboto";
-  color: rgb(153, 153, 153);
+  font-family: var(--ffrb);
+  color: var(--col-lg);
   line-height: 1.6;
   text-align: center;
 }
 
 .team-list-item__name-title {
   font-size: 14px;
-  font-family: "Montserrat";
-  color: rgb(51, 51, 51);
+  font-family: var(--ffmn);
+  color: var(--col-g);
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px;
@@ -363,8 +382,8 @@ li {
 
 .team-list-item__profession {
   font-size: 14px;
-  font-family: "Roboto";
-  color: rgb(153, 153, 153);
+  font-family: var(--ffrb);
+  color: var(--col-lg);
   font-style: italic;
   text-align: center;
   margin-bottom: 86px;
@@ -389,17 +408,23 @@ li {
 }
 
 .overlay {
-  background-image: -webkit-gradient(linear,
-      left bottom,
-      left top,
-      from(rgba(252, 227, 138, 0.902)),
-      to(hsla(0, 83%, 73%, 0.902)));
-  background-image: -o-linear-gradient(bottom,
-      rgba(252, 227, 138, 0.902) 0%,
-      hsla(0, 83%, 73%, 0.902) 100%);
-  background-image: linear-gradient(to top,
-      rgba(252, 227, 138, 0.902) 0%,
-      hsla(0, 83%, 73%, 0.902) 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(252, 227, 138, 0.902)),
+    to(hsla(0, 83%, 73%, 0.902))
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgba(252, 227, 138, 0.902) 0%,
+    hsla(0, 83%, 73%, 0.902) 100%
+  );
+  background-image: linear-gradient(
+    to top,
+    rgba(252, 227, 138, 0.902) 0%,
+    hsla(0, 83%, 73%, 0.902) 100%
+  );
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -495,8 +520,8 @@ li {
 
 .footer-content {
   font-size: 14px;
-  font-family: "Montserrat";
-  color: #333333;
+  font-family: var(--ffmn);
+  color: var(--col-g);
   text-align: center;
   font-weight: 500;
   margin-right: 5px;
@@ -520,16 +545,16 @@ input {
   padding: 14px;
   border: 1px solid #e7e7e7;
   outline: none;
-  color: #9c9999;
-  font-family: "Roboto";
+  color: rgb(156, 153, 153);
+  font-family: var(--ffrb);
   font-size: 15px;
   font-weight: 400;
   font-style: italic;
 }
 
 input::-webkit-input-placeholder {
-  color: #cccccc;
-  font-family: "Roboto";
+  color: rgb(204, 204, 204);
+  font-family: var(--ffrb);
   font-size: 15px;
   font-weight: 400;
   font-style: italic;
@@ -537,7 +562,7 @@ input::-webkit-input-placeholder {
 
 input::-moz-placeholder {
   color: #cccccc;
-  font-family: "Roboto";
+  font-family: var(--ffrb);
   font-size: 15px;
   font-weight: 400;
   font-style: italic;
@@ -545,7 +570,7 @@ input::-moz-placeholder {
 
 input:-ms-input-placeholder {
   color: #cccccc;
-  font-family: "Roboto";
+  font-family: var(--ffrb);
   font-size: 15px;
   font-weight: 400;
   font-style: italic;
@@ -553,7 +578,7 @@ input:-ms-input-placeholder {
 
 input::-ms-input-placeholder {
   color: #cccccc;
-  font-family: "Roboto";
+  font-family: var(--ffrb);
   font-size: 15px;
   font-weight: 400;
   font-style: italic;
@@ -561,7 +586,7 @@ input::-ms-input-placeholder {
 
 input::placeholder {
   color: #cccccc;
-  font-family: "Roboto";
+  font-family: var(--ffrb);
   font-size: 15px;
   font-weight: 400;
   font-style: italic;
@@ -572,7 +597,7 @@ input::placeholder {
   border: none;
   background-color: #95e1d3;
   color: #ffffff;
-  font-family: Montserrat;
+  font-family: var(--ffmn);
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
